@@ -1,5 +1,5 @@
-# COURSENAME
-This is the repository for the LinkedIn Learning course `course-name`. The full course is available from [LinkedIn Learning][lil-course-url].
+# Analytics Engineering for AI: From Data to Natural-Language Questions
+This is the repository for the LinkedIn Learning course `Analytics Engineering for AI: From Data to Natural-Language Questions`. The full course is available from [LinkedIn Learning][lil-course-url].
 
 ![lil-thumbnail-url]
 
