@@ -1,5 +1,6 @@
 # Analytics Engineering for AI — Course Dependencies
 # Install with: pip install -r requirements.txt
+# Requires Python 3.10. Other python versions may work but are not guaranteed to be compatible.
 
 # Core data tools
 duckdb==1.1.3
