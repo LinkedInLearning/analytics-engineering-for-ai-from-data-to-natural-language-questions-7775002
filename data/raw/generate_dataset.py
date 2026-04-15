@@ -9,12 +9,13 @@ Output:
     data/raw/customers_raw.csv
     data/raw/products_raw.csv
 
-Intentional data quality issues (for the dbt cleaning chapter):
+Intentional data quality issues injected into orders_raw.csv only:
     - Some order_date values use MM/DD/YYYY instead of YYYY-MM-DD
-    - A small % of orders have NULL customer_id
-    - product category has mixed case ("Electronics" vs "electronics")
+    - ~3% of orders have NULL customer_id
     - ~2% of order rows are duplicates
     - Some quantity values are 0 or negative (invalid)
+
+customers_raw.csv and products_raw.csv are clean by design.
 """
 
 import random
@@ -36,8 +37,8 @@ COUNTRIES  = ["US", "DE", "FR", "GB", "ES", "MX", "BR", "CA", "AU", "JP"]
 SEGMENTS   = ["consumer", "corporate", "small_business"]
 STATUSES   = ["completed", "completed", "completed", "returned", "cancelled"]  # weighted
 CATEGORIES = [
-    "Electronics", "electronics",       # intentional inconsistency
-    "Clothing", "clothing",
+    "Electronics",
+    "Clothing",
     "Home & Garden",
     "Sports",
     "Books",
@@ -118,8 +119,7 @@ def generate_products(n: int = 100):
         cat, base_name = pool[(i - 1) % len(pool)]
         variant = f" - {random.choice(['Black', 'White', 'Blue', 'Gray', 'Red'])}" \
                   if i > len(pool) else ""
-        # Use messy case for category (intentional inconsistency)
-        category = cat if random.random() > 0.3 else cat.lower()
+        category = cat
         brand    = random.choice(BRANDS)
         price    = round(random.uniform(4.99, 499.99), 2)
         rows.append({
@@ -217,10 +217,10 @@ if __name__ == "__main__":
     print(f"  Products:  {len(products):>6,} rows")
     print(f"  Customers: {len(customers):>6,} rows")
     print(f"  Orders:    {len(orders):>6,} rows (includes ~2% duplicates)")
-    print(f"\nIntentional data quality issues injected:")
-    print(f"  - Mixed date formats in orders_raw.csv")
+    print(f"\nIntentional data quality issues injected into orders_raw.csv only:")
+    print(f"  - Mixed date formats (YYYY-MM-DD and MM/DD/YYYY)")
     print(f"  - ~3% NULL customer_id")
-    print(f"  - Mixed case product categories")
     print(f"  - ~2% duplicate order rows")
     print(f"  - Invalid quantity values (0 and -1)")
+    print(f"\ncustomers_raw.csv and products_raw.csv are clean.")
     print(f"\nNext step -> run: python ch00_setup/00_ingest.py")
