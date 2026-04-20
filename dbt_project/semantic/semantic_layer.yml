@@ -1,0 +1,27 @@
+version: 1
+
+semantic_layer:
+  description: >
+    E-commerce analytics semantic layer.
+    Use this file to understand which tables, metrics, and dimensions
+    are available for natural-language queries.
+
+  models:
+    - name: fct_orders
+      description: >
+        Core fact table. One row per order.
+        Use for revenue, order volume, and order status analysis.
+        Contains customer and product context — no joins needed for most questions.
+      schema: main_marts
+
+    - name: dim_customers
+      description: >
+        Customer dimension with pre-computed lifetime metrics.
+        Use for customer-level analysis: lifetime value, total orders,
+        first and last order dates, segment, and country.
+      schema: main_marts
+
+    - name: dim_products
+      description: >
+        Product dimension. Use for product, category, and brand analysis.
+      schema: main_marts
