@@ -17,6 +17,7 @@ from vanna.chromadb import ChromaDB_VectorStore
 PROJECT_ROOT        = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DB_PATH             = os.path.join(PROJECT_ROOT, "data", "warehouse", "warehouse.duckdb")
 SEMANTIC_LAYER_PATH = os.path.join(PROJECT_ROOT, "dbt_project", "semantic", "semantic_layer.yml")
+CHROMA_PATH         = os.path.join(PROJECT_ROOT, "ai_layer", "vanna_store")
 
 # ── Vanna class: ChromaDB (vector store) + Ollama (LLM) ───────────────────────
 class VannaEcommerce(ChromaDB_VectorStore, Ollama):
@@ -26,7 +27,7 @@ class VannaEcommerce(ChromaDB_VectorStore, Ollama):
 
 
 def get_vanna() -> VannaEcommerce:
-    vn = VannaEcommerce(config={"model": "llama3.1"})
+    vn = VannaEcommerce(config={"model": "llama3.1", "path": CHROMA_PATH})
     vn.connect_to_duckdb(url=DB_PATH)
     return vn
 
