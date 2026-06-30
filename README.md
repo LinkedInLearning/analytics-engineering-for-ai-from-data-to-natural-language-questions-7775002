@@ -44,6 +44,7 @@ To resolve this issue:
 ## Instructor
 
 José Siles
+
 Data Engineer at Nestle
 
 [lil-course-url]: https://www.linkedin.com/learning/analytics-engineering-for-ai-from-data-to-natural-language-questions/build-an-end-to-end-ai-data-pipeline?u=104
