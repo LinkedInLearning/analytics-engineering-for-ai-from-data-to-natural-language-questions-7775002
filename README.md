@@ -46,10 +46,6 @@ To resolve this issue:
 José Siles
 Data Engineer at Nestle
 
-                            
-
-Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/).
-
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
