@@ -6,6 +6,17 @@ This is the repository for the LinkedIn Learning course `Analytics Engineering f
 ## Course Description
 
 _See the readme file in the main branch for updated instructions and information._
+
+As organizations adopt AI-driven analytics, the quality and structure of analytical data become critical to delivering reliable, business-ready insights. This course walks through an end-to-end analytics engineering workflow that enables natural-language analytics on top of trusted data models. Learn how to ingest a realistic dataset, model clean fact and dimension tables in a warehouse, and add tests and documentation to establish trust. Get introduced to a semantic layer that defines consistent business metrics and dimensions. Throughout the course, take note of the emphasis on clarity, trust, and reproducibility, not just tool-specific shortcuts. Finally, connect a lightweight AI text-to-SQL interface and demonstrate how business users can ask natural-language questions and receive accurate, governed answers without writing SQL.
+
+## Learning Objectives
+- Gather and load a small, realistic dataset into a local warehouse.
+- Define and model clean analytics tables in the warehouse (facts and dimensions).
+- Add tests and documentation to ensure models are trustworthy.
+- Build a semantic layer with clear business metrics and dimensions on top of the models.
+- Connect a lightweight AI/text-to-SQL layer that can query the semantic layer.
+- Posit natural-language questions and receive consistent answers without writing any SQL.
+  
 ## Instructions
 This repository has branches for each of the videos in the course. You can use the branch pop up menu in github to switch to a specific branch and take a look at the course at that stage, or you can add `/tree/BRANCH_NAME` to the URL to go to the branch you want to access.
 
