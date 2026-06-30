@@ -43,9 +43,8 @@ To resolve this issue:
 
 ## Instructor
 
-Instructor name
-
-Instructor description
+José Siles
+Data Engineer at Nestle
 
                             
 
