@@ -46,9 +46,6 @@ To resolve this issue:
 José Siles
 Data Engineer at Nestle
 
-
-[0]: # (Replace these placeholder URLs with actual course URLs)
-
 [lil-course-url]: https://www.linkedin.com/learning/analytics-engineering-for-ai-from-data-to-natural-language-questions/build-an-end-to-end-ai-data-pipeline?u=104
 [lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D560DAQG6mI4G0uXcRQ/learning-public-crop_675_1200/B56Z6RYyCLKwAY-/0/1780555653917?e=2147483647&v=beta&t=DPamDEU1oyqvk3wPXA2tAEc-bd0UaM5VVP8abRMab14
 
